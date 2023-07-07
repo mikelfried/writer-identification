@@ -17,8 +17,8 @@ from tqdm import tqdm
 
 from multiprocessing import Pool
 
-FONTS_FOLDER = Path('./datasets/fonts')
-DATASET_FOLDER = Path('./datasets/v5')
+FONTS_FOLDER = Path('/home/frmich23/work/datasets/fonts')
+DATASET_FOLDER = Path('/home/frmich23/work/datasets/v5')
 
 IMAGES_PER_FONT = 500
 IMAGE_SIZE = (256, 82)
@@ -81,11 +81,11 @@ response = requests.get(word_site)
 WORDS = response.content.splitlines()
 WORDS = [word.decode("utf-8") for word in WORDS if len(word) >= 2]
 
-bgs = [np.asarray(Image.open(bg)) for bg in glob.glob("./datasets/bg/*")]
+bgs = [np.asarray(Image.open(bg)) for bg in glob.glob("/home/frmich23/work/datasets/bgs/*")]
 
 
 
-TEMP_LOCATION = Path('./temp')
+TEMP_LOCATION = Path('/home/frmich23/work/datasets/temp')
 TEMP_LOCATION.mkdir(exist_ok=True)
 
 def get_size_of_font(font_path):
@@ -219,7 +219,7 @@ class RealImage(Operation):
 shutil.rmtree(TEMP_LOCATION)
 TEMP_LOCATION.mkdir(exist_ok=True)
 
-fonts_files = glob.glob("/datasets/fonts/*")
+fonts_files = glob.glob("/home/frmich23/work/datasets/fonts/*")
 
 for fonts_file in tqdm(fonts_files):
     try:
