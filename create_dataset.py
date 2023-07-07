@@ -11,8 +11,8 @@ import requests
 import re
 
 import wget
-from PIL import ImageFilter, ImageOps, ImageDraw, ImageFont
-from PIL.Image import Image
+from PIL import Image, ImageFilter, ImageOps, ImageDraw, ImageFont
+
 from tqdm import tqdm
 
 from multiprocessing import Pool
