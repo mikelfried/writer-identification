@@ -62,17 +62,17 @@ def download_font(font):
         print(f'WARNING {zip_path} does not exist.')
 
 
-pool = Pool(processes=8)
+# pool = Pool(processes=8)
 
 for font in tqdm(all_fonts):
     try:
-        pool.apply_async(download_font, args=(font,))
-        # download_font(font)
+        # pool.apply_async(download_font, args=(font,))
+        download_font(font)
     except Exception as e:
         print(f'Failed on font: {font}', e)
 
-pool.close()
-pool.join()
+# pool.close()
+# pool.join()
 
 
 
