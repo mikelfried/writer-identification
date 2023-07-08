@@ -2,4 +2,7 @@ wget
 tqdm
 Augmentor
 requests
-
+wandb
+torch
+pytorch-metric-learning
+lightning
