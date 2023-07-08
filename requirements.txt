@@ -5,4 +5,5 @@ requests
 wandb
 torch
 pytorch-metric-learning
-lightning
+pytorch-lightning
+  
